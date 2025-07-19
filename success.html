@@ -3,49 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! 🎉</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <title>Transaction Logged ✅</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Orbitron', sans-serif;
-            background: radial-gradient(circle at center, #000000, #1a1a1a);
-            color: #00ffcc;
+            background: radial-gradient(circle at center, #000000, #660000, #000000);
+            color: #00ff00;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
+            animation: glitchEffect 2s infinite;
+        }
+        @keyframes glitchEffect {
+            0%, 100% { background-color: #000000; }
+            50% { background-color: #330000; }
         }
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #00ff00;
         }
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #ffffff;
+            margin-top: 20px;
         }
         .btn {
             display: inline-block;
-            background-color: #00ffcc;
-            color: #000;
+            background-color: #ff0000;
+            color: #ffffff;
             padding: 12px 24px;
             margin-top: 30px;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
-            box-shadow: 0 0 15px #00ffcc88;
+            box-shadow: 0 0 15px #ff000088;
             transition: 0.3s ease;
         }
         .btn:hover {
-            background-color: #00cc99;
-            box-shadow: 0 0 25px #00ffcc;
+            background-color: #00ff00;
+            color: #000000;
+            box-shadow: 0 0 25px #00ff00;
         }
     </style>
 </head>
 <body>
-    <h1>🎉 Thank You for Supporting Me!</h1>
-    <p>Your donation keeps me grinding harder in my gaming journey. 🙌</p>
-    <a href="index.html" class="btn">⬅️ Back to Home</a>
+    <h1>✅ Transaction Logged!</h1>
+    <p>Thank you for supporting KEVV. Your donation is helping us stay online. 💀</p>
+    <a href="index.html" class="btn">⬅ Back to Home</a>
 </body>
 </html>
