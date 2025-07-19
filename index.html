@@ -3,79 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Abhinav's Gaming Journey 🎮</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <title>DONATE KEVV 💀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Orbitron', sans-serif;
-            background: radial-gradient(circle at center, #0f0f0f, #000000);
-            color: #ffffff;
+            background: linear-gradient(135deg, #000000, #050505, #0f0f0f);
+            color: #00ff00;
             text-align: center;
+            animation: glitchBackground 3s infinite;
+        }
+        @keyframes glitchBackground {
+            0% { background-color: #000000; }
+            50% { background-color: #0a0a0a; }
+            100% { background-color: #000000; }
         }
         header {
             padding: 20px;
-            background-color: #1a1a1a;
+            background-color: #111;
+            box-shadow: 0 0 20px #00ff00aa;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            color: #00ffcc;
+            font-size: 2.8rem;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
+        }
+        header p {
+            color: #ff0000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
         }
         .content {
             padding: 30px;
         }
+        .warning {
+            color: #ff0000;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #ff0000;
+        }
         .qr-section {
             margin: 20px auto;
-            background: #1f1f1f;
+            background: #111;
+            border: 2px dashed #00ff00;
             border-radius: 15px;
             padding: 20px;
-            width: 300px;
-            box-shadow: 0 0 20px #00ffcc44;
+            width: 320px;
+            box-shadow: 0 0 25px #00ff00aa;
         }
         .qr-section img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
+            filter: grayscale(0.5) drop-shadow(0 0 10px #00ff00);
         }
         .btn {
-            background-color: #00ffcc;
-            color: #000;
-            padding: 15px 25px;
+            background-color: #00ff00;
+            color: #000000;
+            padding: 15px 30px;
             margin-top: 20px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 5px;
             font-weight: bold;
-            box-shadow: 0 0 10px #00ffcc88;
+            box-shadow: 0 0 15px #00ff00bb;
             transition: 0.3s ease;
         }
         .btn:hover {
-            background-color: #00cc99;
-            box-shadow: 0 0 20px #00ffcc;
+            background-color: #00cc00;
+            box-shadow: 0 0 25px #00ff00;
         }
         footer {
             margin-top: 50px;
             font-size: 0.9rem;
             color: #888;
         }
+        .timer {
+            color: #ff0000;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            animation: blink 1s step-start infinite;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Support Abhinav 🎮</h1>
-        <p>Help me level up my gaming journey!</p>
+        <h1>DONATE KEVV 💀</h1>
+        <p>⚠️ PRIVATE ACCESS ONLY ⚠️</p>
     </header>
 
     <div class="content">
+        <div class="warning">🚨 WARNING: Site expires in <span class="timer" id="timer">24:00:00</span></div>
         <h2>Scan & Donate</h2>
         <div class="qr-section">
-            <img src="https://drive.google.com/uc?id=13RXXXu6zwgJZV2inTBn8_k1tOfbINTMk" alt="Fampay QR Code">
+            <img src="fampay-qr.png" alt="Fampay QR Code">
         </div>
-        <p>Scan the QR code using any UPI app to send your support 🙌</p>
+        <p>Scan the QR code using any UPI app to send your support 💸</p>
         <a href="success.html" class="btn">I Have Donated ✅</a>
     </div>
 
     <footer>
-        <p>&copy; 2025 Abhinav Gaming | All Rights Reserved</p>
+        <p>&copy; 2025 DONATE KEVV | All Rights Reserved</p>
     </footer>
+
+    <script>
+        // Countdown timer (24 hours)
+        let timerElement = document.getElementById('timer');
+        let timeLeft = 24 * 60 * 60; // 24 hours in seconds
+
+        setInterval(() => {
+            let hours = Math.floor(timeLeft / 3600);
+            let minutes = Math.floor((timeLeft % 3600) / 60);
+            let seconds = timeLeft % 60;
+            timerElement.textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            if (timeLeft > 0) timeLeft--;
+        }, 1000);
+    </script>
 </body>
 </html>
