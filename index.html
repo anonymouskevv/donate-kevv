@@ -9,26 +9,26 @@
         body {
             margin: 0;
             font-family: 'Orbitron', sans-serif;
-            background: linear-gradient(135deg, #000000, #050505, #0f0f0f);
+            background: radial-gradient(circle at center, #000000, #330000, #000000);
             color: #00ff00;
             text-align: center;
             animation: glitchBackground 3s infinite;
         }
         @keyframes glitchBackground {
-            0% { background-color: #000000; }
-            50% { background-color: #0a0a0a; }
-            100% { background-color: #000000; }
+            0% { background: radial-gradient(circle, #000000, #330000, #000000); }
+            50% { background: radial-gradient(circle, #000000, #660000, #000000); }
+            100% { background: radial-gradient(circle, #000000, #330000, #000000); }
         }
         header {
             padding: 20px;
-            background-color: #111;
-            box-shadow: 0 0 20px #00ff00aa;
+            background: linear-gradient(90deg, #ff0000, #111, #00ff00);
+            box-shadow: 0 0 25px #ff000088, 0 0 50px #00ff0088;
         }
         header h1 {
             margin: 0;
             font-size: 2.8rem;
             color: #00ff00;
-            text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
+            text-shadow: 0 0 8px #ff0000, 0 0 15px #00ff00;
         }
         header p {
             color: #ff0000;
@@ -55,12 +55,18 @@
             border-radius: 15px;
             padding: 20px;
             width: 320px;
-            box-shadow: 0 0 25px #00ff00aa;
+            box-shadow: 0 0 25px #ff000088, 0 0 25px #00ff00aa;
         }
         .qr-section img {
             width: 100%;
             border-radius: 5px;
-            filter: grayscale(0.5) drop-shadow(0 0 10px #00ff00);
+            filter: drop-shadow(0 0 10px #00ff00) grayscale(0.5);
+        }
+        .upi-id {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000;
         }
         .btn {
             background-color: #00ff00;
@@ -74,8 +80,9 @@
             transition: 0.3s ease;
         }
         .btn:hover {
-            background-color: #00cc00;
-            box-shadow: 0 0 25px #00ff00;
+            background-color: #ff0000;
+            box-shadow: 0 0 25px #ff0000;
+            color: #ffffff;
         }
         footer {
             margin-top: 50px;
@@ -100,8 +107,9 @@
         <div class="warning">🚨 WARNING: Site expires in <span class="timer" id="timer">24:00:00</span></div>
         <h2>Scan & Donate</h2>
         <div class="qr-section">
-            <img src="fampay-qr.png" alt="Fampay QR Code">
+            <img src="FAMPAY QR.jpg" alt="Fampay QR Code">
         </div>
+        <div class="upi-id">UPI ID: abhinavsomalkar@fam</div>
         <p>Scan the QR code using any UPI app to send your support 💸</p>
         <a href="success.html" class="btn">I Have Donated ✅</a>
     </div>
